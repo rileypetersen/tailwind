@@ -7,6 +7,8 @@ export { default as Modal } from './components/ui/Modal'
 export { default as PageHeading } from './components/ui/PageHeading'
 export { default as StackedList } from './components/ui/StackedList'
 
+export * from './components/providers/DesignSystemProvider'
+
 export * from './lib/utils'
 
 

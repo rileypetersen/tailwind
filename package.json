@@ -25,9 +25,9 @@
         "clean": "rimraf dist",
         "build:css": "tailwindcss -c tailwind.config.js -i ./src/styles/index.css -o ./dist/styles.css --minify",
         "build:js": "tsup",
-    "build": "npm run clean && npm run build:css && npm run build:js",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+        "build": "npm run clean && npm run build:css && npm run build:js",
+    "storybook": "storybook dev -p 6006 --disable-telemetry",
+    "build-storybook": "storybook build --disable-telemetry"
     },
     "dependencies": {
         "@headlessui/react": "^2.2.9",
@@ -40,18 +40,18 @@
     "devDependencies": {
         "@types/react": "^18.3.18",
         "@types/react-dom": "^18.3.5",
-    "@storybook/addon-a11y": "^8.5.0",
-    "@storybook/addon-essentials": "^8.5.0",
-    "@storybook/addon-interactions": "^8.5.0",
-    "@storybook/react-vite": "^8.5.0",
-    "@storybook/test": "^8.5.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
+        "@storybook/addon-a11y": "^8.5.0",
+        "@storybook/addon-essentials": "^8.5.0",
+        "@storybook/addon-interactions": "^8.5.0",
+        "@storybook/react-vite": "^8.5.0",
+        "@storybook/test": "^8.5.0",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.4.49",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "rimraf": "^6.0.1",
         "tailwindcss": "^3.4.17",
         "tsup": "^8.3.5",
-    "typescript": "^5.7.3"
+        "typescript": "^5.7.3"
     }
 }
