@@ -24,7 +24,7 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { classNames } from '@/lib/utils'
+import { classNames } from '../../lib/utils'
 
 const navigation = [
     { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },

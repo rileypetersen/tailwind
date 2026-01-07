@@ -1,6 +1,48 @@
 {
-  "dependencies": {
-    "@headlessui/react": "^2.2.9",
-    "@heroicons/react": "^2.2.0"
-  }
+    "name": "@rileypetersen/tailwind",
+    "version": "0.0.0",
+    "private": true,
+    "description": "WIP: plug-and-play React component library authored with Tailwind CSS.",
+    "license": "UNLICENSED",
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./styles.css": "./dist/styles.css"
+    },
+    "scripts": {
+        "clean": "rimraf dist",
+        "build:css": "tailwindcss -c tailwind.config.js -i ./src/styles/index.css -o ./dist/styles.css --minify",
+        "build:js": "tsup",
+        "build": "npm run clean && npm run build:css && npm run build:js"
+    },
+    "dependencies": {
+        "@headlessui/react": "^2.2.9",
+        "@heroicons/react": "^2.2.0"
+    },
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.18",
+        "@types/react-dom": "^18.3.5",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "rimraf": "^6.0.1",
+        "tailwindcss": "^3.4.17",
+        "tsup": "^8.3.5",
+        "typescript": "^5.7.3"
+    }
 }
