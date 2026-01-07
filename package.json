@@ -26,8 +26,8 @@
         "build:css": "tailwindcss -c tailwind.config.js -i ./src/styles/index.css -o ./dist/styles.css --minify",
         "build:js": "tsup",
         "build": "npm run clean && npm run build:css && npm run build:js",
-    "storybook": "storybook dev -p 6006 --disable-telemetry",
-    "build-storybook": "storybook build --disable-telemetry"
+        "storybook": "storybook dev -p 6006 --disable-telemetry",
+        "build-storybook": "storybook build --disable-telemetry"
     },
     "dependencies": {
         "@headlessui/react": "^2.2.9",
