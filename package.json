@@ -19,13 +19,15 @@
             "import": "./dist/index.js",
             "require": "./dist/index.cjs"
         },
-        "./styles.css": "./dist/styles.css"
+        "./styles.css": "./dist/styles.css",
+        "./styles-preflight.css": "./dist/styles-preflight.css"
     },
     "scripts": {
         "clean": "rimraf dist",
         "build:css": "tailwindcss -c tailwind.config.js -i ./src/styles/index.css -o ./dist/styles.css --minify",
+        "build:css:preflight": "tailwindcss -c tailwind.config.js -i ./src/styles/preflight.css -o ./dist/styles-preflight.css --minify",
         "build:js": "tsup",
-        "build": "npm run clean && npm run build:css && npm run build:js",
+        "build": "npm run clean && npm run build:css && npm run build:css:preflight && npm run build:js",
         "storybook": "storybook dev -p 6006 --disable-telemetry",
         "build-storybook": "storybook build --disable-telemetry"
     },

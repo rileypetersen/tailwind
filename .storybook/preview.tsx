@@ -2,7 +2,10 @@ import type { Preview } from '@storybook/react'
 
 // Use the source CSS entry so Storybook can hot-reload styles during development.
 // This is processed via PostCSS (tailwindcss + autoprefixer).
-import '../src/styles/index.css'
+//
+// NOTE: Storybook is where we want the “looks great out of the box” baseline, so
+// we include Tailwind Preflight here.
+import '../src/styles/preflight.css'
 
 import { DesignSystemProvider } from '../src/components/providers/DesignSystemProvider'
 
